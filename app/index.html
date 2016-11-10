@@ -7,19 +7,23 @@
 </head>
 
 <body>
-  <h1>{{"Ciao, " + "Angular!"}}</h1>
+  <h1>{{"Benvenuto, " + "Visitatore!"}}</h1>
 
   <p>
-    La somma di 12 e 13 &egrave; uguale a {{12+13}}
+    La somma di 12 e 13 &egrave; uguale a {{12+13}} ?
   </p>
+  
+  <h4>{{"Questo è il nostro Gem Store"}}</h4>
 
   <div ng-controller="StoreController as store">
 	<div ng-show="!store.products[0].soldOut">
 		<div ng-repeat="p in store.products">
 			<div ng-hide="p.soldOut">
+				
+				<h4><img ng-src="{{p.img}}"> </img></h4>
 				<h1> {{"Product Name: "}} {{p.name}} </h1>
-				<h2> {{"Product Price: "}} {{p.price}}</h2>
-				<p> {{"Product Description: "}} {{p.description}} </p>
+				<h2> {{"Product Price: $"}} {{p.price}}</h2>
+				<p> <h2>{{"Product Description: "}} </h2> {{p.description}} </p>
 				<button ng-show="p.canPurcase"> Add to Cart </button>
 			</div>
 		</div>

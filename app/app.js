@@ -2,11 +2,12 @@ var gems=[
   {
     name: 'Dodecahedron',
     price: 2.95,
-    description: '. . .',
+    description: 'Twelve sided polyhedron with all sides equidimensional and either rhombic or pentagonal. If the dodecahedron is composed of rhombs, it is known as a rhombic dodecahedron, or simply as a dodecahedron. If it is composed of pentagons, it is known as a pentagonal dodecahedron or pyritohedron. Minerals shaped as dodecahedrons belong to the isometric system.',
     canPurcase: true,
     soldOut: false,
     speciication: {},
     reviews: {},
+    img : '/img/pentagonal.jpg',
 
 },
 {
@@ -17,6 +18,7 @@ var gems=[
   soldOut: false,
   speciication: {},
   reviews: {},
+  img: '/img/dodecahedron.jpg',
 },
 ];
 
