@@ -45,29 +45,22 @@ angular.module('gemStore',[])
 				ins=i;
 				i++;
 			}
-			
-			else{
-				if($scope.toPurchase[i] === selectedGem){
-					alert('WARNING: You have alredy purchased this gem');
-					i++;
+			 else if($scope.toPurchase[i] === selectedGem){
+				alert('WARNING: You have alredy purchased this gem');
+				i++;
+				break;
+			}    
+			else if(++i>$scope.toPurchase.length){
+				if(selectedGem === $scope.toPurchase[ins]){
 					break;
 				}
 				else{
-					i++;
-					if(i>$scope.toPurchase.length){
-						if(selectedGem === $scope.toPurchase[ins]){
-							break;
-						}
-						else{
-							$scope.toPurchase[i-1] = selectedGem;
-							ins=$scope.toPurchase.length;
-							break;
-						}
-						
-					}
+					$scope.toPurchase[i-1] = selectedGem;
+					ins=$scope.toPurchase.length;
+					break;
 				}
-			}
-			
+      
+			}	
 		}
 		alert('sono fuori ' +ins);
 		console.log("toPurchase Length: "+$scope.toPurchase.length);
