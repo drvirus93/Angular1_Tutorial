@@ -1,0 +1,22 @@
+	
+	<table class="table table-hover table-inverse">  	
+		<div ng-repeat="gem in $scope.toPurchase">
+			<th> <h4 align="center"><img ng-src="{{gem.img}}"> </img></h4> </th>
+			<tr>
+				<td> <h1> {{"Product Name: "}} {{gem.name}} </h1>  </td>						
+			</tr>
+		
+			<tr>
+				<td> <h2> {{"Product Price: $"}} {{gem.price}}</h2> </td>						
+			</tr>
+				
+			<tr>
+				<td> <h2>{{"Product Description: "}} </h2> {{gem.description}} </td>
+			</tr>
+				
+			<tr>
+				<td> <button type="button" class="btn btn-primary btn-sm" ng-show="p.canPurcase" ng-click="buyGemAction(p)"> Add to Cart </button> </td>
+			</tr>
+		</div>	
+	</table>
+  
