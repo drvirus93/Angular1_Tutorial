@@ -4,25 +4,28 @@
   <title>Prima pagina con AngularJS</title>
   <script src="js/angular.min.js"></script>
   <script src="app.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <script src="js/jquery-3.1.1.min.js">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  
 </head>
 
 <body>
-  <h1>{{"Benvenuto, " + "Visitatore!"}}</h1>
-
+  <h1>{{"Welcome, " + "Visitors!"}}</h1>
+<!--
   <p>
     La somma di 12 e 13 &egrave; uguale a {{12+13}} ?
   </p>
+  -->
+  <h4>{{"This is our Gem Store, You can buy everything!"}}</h4>
   
-  <h4>{{"Questo è il nostro Gem Store"}}</h4>
 
   <div ng-controller="StoreController">
 	<div ng-show="!store.products[0].soldOut">
 		<div ng-repeat="p in products">
 			<div ng-hide="p.soldOut">
 				<table class="table table-hover table-inverse">  
-					<th> <h4><img ng-src="{{p.img}}"> </img></h4> </th>
+					<th> <h4 align="center"><img ng-src="{{p.img}}"> </img></h4> </th>
 					<tr>
 						<td> <h1> {{"Product Name: "}} {{p.name}} </h1>  </td>						
 					</tr>
