@@ -1,5 +1,6 @@
 angular.module('gemStore',[])
 .controller('StoreController',function($scope){
+	$scope.toPurchase = [];
 	
     $scope.products = [
 	  {
@@ -33,12 +34,43 @@ angular.module('gemStore',[])
 	$scope.buyGemAction = function(gem) {
 		alert('You can buy this gem' + " " + gem.name + " at $ " + gem.price);		
 		//console.log(gem);	
+		
 		var selectedGem = gem;
-		var toPurchase = [];
+		var i=0;
+		var ins=0;
 		
-		toPurchase += [{selectedGem}];
-		console.log("gem selected: "+selectedGem);
-		
+		while(i<=$scope.toPurchase.length){
+			if($scope.toPurchase.length === 0){
+				$scope.toPurchase[i]=selectedGem;
+				ins=i;
+				i++;
+			}
+			
+			else{
+				if($scope.toPurchase[i] === selectedGem){
+					alert('WARNING: You have alredy purchased this gem');
+					i++;
+					break;
+				}
+				else{
+					i++;
+					if(i>$scope.toPurchase.length){
+						if(selectedGem === $scope.toPurchase[ins]){
+							break;
+						}
+						else{
+							$scope.toPurchase[i-1] = selectedGem;
+							ins=$scope.toPurchase.length;
+							break;
+						}
+						
+					}
+				}
+			}
+			
+		}
+		alert('sono fuori ' +ins);
+		console.log("toPurchase Length: "+$scope.toPurchase.length);
 	 }
 	 
 	 
