@@ -28,7 +28,7 @@ angular.module('gemStore',[])
 	
     $scope.confirmPurchase = function() {
 		
-		alert('test ');
+		console.log($scope.toPurchase);
 	 }	
 	 
 	$scope.buyGemAction = function(gem) {
