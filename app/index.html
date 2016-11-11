@@ -4,6 +4,8 @@
   <title>Prima pagina con AngularJS</title>
   <script src="js/angular.min.js"></script>
   <script src="app.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,20 +17,41 @@
   
   <h4>{{"Questo è il nostro Gem Store"}}</h4>
 
-  <div ng-controller="StoreController as store">
+  <div ng-controller="StoreController">
 	<div ng-show="!store.products[0].soldOut">
-		<div ng-repeat="p in store.products">
+		<div ng-repeat="p in products">
 			<div ng-hide="p.soldOut">
-				
-				<h4><img ng-src="{{p.img}}"> </img></h4>
-				<h1> {{"Product Name: "}} {{p.name}} </h1>
-				<h2> {{"Product Price: $"}} {{p.price}}</h2>
-				<p> <h2>{{"Product Description: "}} </h2> {{p.description}} </p>
-				<button ng-show="p.canPurcase"> Add to Cart </button>
+				<table class="table table-hover table-inverse">  
+					<th> <h4><img ng-src="{{p.img}}"> </img></h4> </th>
+					<tr>
+						<td> <h1> {{"Product Name: "}} {{p.name}} </h1>  </td>						
+					</tr>
+					
+					<tr>
+						<td> <h2> {{"Product Price: $"}} {{p.price}}</h2> </td>						
+					</tr>
+					
+					<tr>
+						<td> <h2>{{"Product Description: "}} </h2> {{p.description}} </td>
+					</tr>
+					
+					<tr>
+						<td> <button type="button" class="btn btn-primary btn-sm" ng-show="p.canPurcase" ng-click="buyGemAction(p)"> Add to Cart </button> </td>
+					</tr>
+					
+					<tr> 
+						<td> <a href="#/{{p.name}}" class="thumb"> <img ng-src="{{p.imageUrl}}" alt="{{p.name}}" /> </a> </td> 
+					</tr>
+					
+					 <tr> 
+						 <td> <a ng-href="page1.html{{hash}}">See more...</a> </td> 
+					 </tr>
+				</table>
 			</div>
 		</div>
 	</div>
+	<h3 align="center"> Complete Your Purchase! <button type="button" class="btn btn-success" ng-click="confirmPurchase()"> BUY NOW</button>  </h3>
   </div>
+  
 </body>
-
 </html>
