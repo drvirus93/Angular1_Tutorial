@@ -2,19 +2,19 @@
   <h4> Enter Your Credential </h4>
 		<table class="table table-hover table-inverse">
 			<tr>
-				<td> <h1> {{"Name: "}} {{user.name}} </h1>  </td>
+				<td> Enter Your name <input type="text" placeholder="Name " ng-model="user.name"/> </td>
 			</tr>
 
 			<tr>
-				<td> <h2> {{"Surname: "}} {{user.surname}}</h2> </td>
+				<td> Enter your surname <input type="text" placeholder="Surname " ng-model="user.surname" /> </td>
 			</tr>
 
 			<tr>
-				<td> <h2>{{"Card Number: "}} {{user.iban}} </h2> </td>
+				<td> Enter your Card Number  <input type="text" placeholder="IBAN " ng-model="user.iban" /> </td>
 			</tr>
 
       <tr>
-        <td> <button type="button" class="btn btn-primary btn-sm"> Order </button>  </td>
+        <td> <button type="button" class="btn btn-primary btn-sm" ng-click="confirmOrder();"> Order </button>  </td>
       </tr>
 	</table>
 </div>
