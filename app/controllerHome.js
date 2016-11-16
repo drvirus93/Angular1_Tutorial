@@ -39,6 +39,8 @@ angular.module('gemStore')
 		//console.log($rootScope.toPurchase);
 	 }
 
+	 $rootScope.user = $scope.user;
+
 	$scope.buyGemAction = function(gem) {
 		alert('You can buy this gem' + " " + gem.name + " at $ " + gem.price);
 		//console.log(gem);
@@ -73,6 +75,4 @@ angular.module('gemStore')
 
 		console.log("toPurchase Length: "+$rootScope.toPurchase.length);
 	 }
-
-
 });
