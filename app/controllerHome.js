@@ -1,7 +1,7 @@
 angular.module('gemStore')
 .controller('ControllerHome',function($rootScope, $scope){
 	$rootScope.toPurchase = [];
-	
+
     $scope.products = [
 	  {
 		name: 'Dodecahedron',
@@ -30,23 +30,23 @@ angular.module('gemStore')
 	{
 		productName: '',
 		name: '',
-		email: '',
+		surname: '',
 		iban: '',
 	}
 	];
     $scope.confirmPurchase = function() {
-		
-		console.log($rootScope.toPurchase);
-	 }	
-	 
+
+		//console.log($rootScope.toPurchase);
+	 }
+
 	$scope.buyGemAction = function(gem) {
-		alert('You can buy this gem' + " " + gem.name + " at $ " + gem.price);		
-		//console.log(gem);	
-		
+		alert('You can buy this gem' + " " + gem.name + " at $ " + gem.price);
+		//console.log(gem);
+
 		var selectedGem = gem;
 		var i=0;
 		var ins=0;
-		
+
 		while(i<=$rootScope.toPurchase.length){
 			if($rootScope.toPurchase.length === 0){
 				$rootScope.toPurchase[i]=selectedGem;
@@ -57,7 +57,7 @@ angular.module('gemStore')
 				alert('WARNING: You have alredy purchased this gem');
 				i++;
 				break;
-			}    
+			}
 			else if(++i>$rootScope.toPurchase.length){
 				if(selectedGem === $rootScope.toPurchase[ins]){
 					break;
@@ -67,13 +67,12 @@ angular.module('gemStore')
 					ins=$rootScope.toPurchase.length;
 					break;
 				}
-      
-			}	
+
+			}
 		}
-		
+
 		console.log("toPurchase Length: "+$rootScope.toPurchase.length);
 	 }
-	 
-	 
-});
 
+
+});

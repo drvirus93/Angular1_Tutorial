@@ -11,7 +11,7 @@ config(['$locationProvider', '$routeProvider',
           templateUrl: 'carrello.html',
           controller: 'ControllerCarrello'
         }).
-        when('/confermaAcquisto' ,{
+        when('/confermaAcquisto', {
           templateUrl: 'confermaAcquisto.html',
           controller: 'ControllerConfermaAcquisto'
         }).
