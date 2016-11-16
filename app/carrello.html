@@ -1,16 +1,17 @@
+<h3> Cart </h3>
 <div ng-repeat="g in newGem">
 		<table class="table table-hover table-inverse">
 			<th> <h4 align="center"><img ng-src="{{g.img}}"> </img></h4> </th>
 			<tr>
-				<td> <h1> {{"Product Name: "}} {{g.name}} </h1>  </td>
+				<td> <h1> {{"Name: "}} {{g.name}} </h1>  </td>
 			</tr>
 
 			<tr>
-				<td> <h2> {{"Product Price: $"}} {{g.price}}</h2> </td>
+				<td> <h2> {{"Price: $"}} {{g.price}}</h2> </td>
 			</tr>
 
 			<tr>
-				<td> <h2>{{"Product Description: "}} </h2> {{g.description}} </td>
+				<td> <h2>{{"Description: "}} </h2> {{g.description}} </td>
 			</tr>
 
 			<tr>
@@ -19,4 +20,4 @@
 	</table>
 
 	</div>
-<button type="button" class="btn btn-primary btn-sm" ng-click="completeShopping();"> Confirm Purchase </button> 
+<button type="button" class="btn btn-primary btn-sm" ng-click="completeShopping();"> Confirm Purchase </button>
