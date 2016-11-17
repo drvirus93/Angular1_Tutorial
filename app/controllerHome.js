@@ -2,20 +2,7 @@ angular.module('valveStore')
 .controller('ControllerHome',function($rootScope, $scope){
 	$rootScope.toPurchase = [];
 
-    $scope.products = [
-	  {
-		name: 'Performance',
-		price: 2.95,
-		description: 'In venti anni di storia abbiamo realizzato prodotti per soddisfare le richieste dei nostri clienti in tutto il mondo. A distanza di tempo le richieste sono cambiate, e per questo abbiamo dato una nuova veste ai nostri prodotti più famosi e prestigiosi, proponendo versioni riviste e aggiornate. Il nuovo amplificatore integrato Performance aumenta la potenza, rimanendo fedele al look vincente dell’originale, considerato un’icona di rara eleganza e piacevolezza.',
-		canPurcase: true,
-		soldOut: false,
-		specification: {},
-		reviews: {},
-		img : '/images/grid4.jpg',
-
-		}
-		
-	];
+$scope.toPurchase = [];
 
 	$scope.user = [
 	{
@@ -23,10 +10,9 @@ angular.module('valveStore')
 		name: '',
 		surname: '',
 		cardNumber: '',
-	}
+	},
 	];
     $scope.confirmPurchase = function() {
-
 		//console.log($rootScope.toPurchase);
 	 }
 
@@ -34,7 +20,6 @@ angular.module('valveStore')
 
 	$scope.buyGemAction = function(gem) {
 		alert('You can buy this gem' + " " + gem.name + " at $ " + gem.price);
-		//console.log(gem);
 
 		var selectedGem = gem;
 		var i=0;
@@ -60,9 +45,7 @@ angular.module('valveStore')
 					ins=$rootScope.toPurchase.length;
 					break;
 				}
-
 			}
 		}
-
 	 }
 });
