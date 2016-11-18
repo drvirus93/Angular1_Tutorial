@@ -3,10 +3,14 @@ config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
 
       $routeProvider.
-        when('/foo', {
+        when('/valveStore', {
           templateUrl: 'home.html',
           controller: 'ControllerHome'
         }).
-        otherwise('/foo');
+        when('/single', {
+          templateUrl: 'single.html',
+          controller: 'ControllerSingle'
+        }).
+        otherwise('/valveStore');
     }
   ]);

@@ -10,7 +10,7 @@
     <script src="app.js"></script>
     <script src="controllerHome.js"></script>
     <script src="controllerCarrello.js"></script>
-    <script src="controllerConfermaAcquisto.js"></script>
+    <script src="controllerSingle.js"></script>
     <script src="js/jquery-3.1.1.min.js">
 
 		<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -25,7 +25,29 @@
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<!--bootstrap-js-->
 		<script src="js/bootstrap.min.js"></script>
-		<!--script-->
+		
+        <!--script-->
+        <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+        
+        <!--fonts-->
+        <link href='//fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+        
+         <!-- FlexSlider -->
+            <script src="js/imagezoom.js"></script>
+              <script defer src="js/jquery.flexslider.js"></script>
+            <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+            <script>
+            // Can also be used with $(document).ready()
+            $(window).load(function() {
+              $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails"
+              });
+            });
+            </script>
+        <!-- //FlexSlider-->
+
 
     </head>
     <body>
@@ -34,10 +56,15 @@
         <div ng-include="'header.html'"></div>
     <!--HEADER-->
     
-    <!--HOME -->
-     <div ng-include="'home.html'"></div>
-    <!--HOME -->
+<!--APP -->    
+ <div ng-view> 
 
+ </div>
+<!--APP -->
+
+     <!--FOOTER -->
+        <div ng-include="'footer.html'"></div>
+    <!--FINE FOOTER -->
 
     </body>
 </html>

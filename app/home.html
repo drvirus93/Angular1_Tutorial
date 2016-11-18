@@ -1,44 +1,4 @@
-<!--<div>
-	<div ng-show="!store.products[0].soldOut">
-		<div ng-repeat="p in products">
-			<div ng-hide="p.soldOut">
-				<table class="table table-hover table-inverse">
-					<th> <h4 align="center"><img ng-src="{{p.img}}"> </img></h4> </th>
-					<tr>
-						<td> <h1> {{"Product Name: "}} {{p.name}} </h1>  </td>
-					</tr>
 
-					<tr>
-						<td> <h2> {{"Product Price: $"}} {{p.price}}</h2> </td>
-					</tr>
-
-					<tr>
-						<td> <h2>{{"Product Description: "}} </h2> {{p.description}} </td>
-					</tr>
-
-					<tr>
-						<td> <button type="button" class="btn btn-primary btn-sm" ng-show="p.canPurcase" ng-click="buyGemAction(p)"> Add to Cart </button> </td>
-					</tr>
-
-					<tr>
-						<td> <a href="#/{{p.name}}" class="thumb"> <img ng-src="{{p.imageUrl}}" alt="{{p.name}}" /> </a> </td>
-					</tr>
-
-					 <tr>
-						 <td> <a ng-href="page1.html{{hash}}">See more...</a> </td>
-					 </tr>
-				</table>
-			</div>
-		</div>
-	</div>
-	<h3 align="center"> Complete Your Purchase! <button type="button" class="btn btn-success" ng-click="confirmPurchase()"> BUY NOW</button>  </h3>
-	<h3 align="center"> Complete Your Purchase! <a href="#/carrello" class="btn btn-success" > BUY NOW </a> </h3>
-  </div>
--->
-
-    <!--CAROUSEL -->
-        <div ng-include="'carousel.html'"></div>
-    <!--CAROUSEL -->
 
 <div class="clearfix"></div>
         <div class="shop-grid">
@@ -61,7 +21,7 @@
                     		</div>
                       <!-- end normal -->
                     <div class="quick-view">
-                        <a href="single.html">Quick view</a>
+                        <a href="#/single">Quick view</a>
                     </div>
                 </div>
                 <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -82,7 +42,7 @@
                     	</div>
                     <!-- end normal -->
                     <div class="quick-view">
-                        <a href="single.html">View</a>
+                        <a href="#/single.html">View</a>
                     </div>
                 </div>
                 <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -102,7 +62,7 @@
                         </div>
                     <!-- end normal -->
                     <div class="quick-view">
-                        <a href="single.html">View</a>
+                        <a href="#/single.html">View</a>
                     </div>
                 </div>
                 <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -122,7 +82,7 @@
                         </div>
                     <!-- end normal -->
                     <div class="quick-view">
-                        <a href="single.html">View</a>
+                        <a href="#/single.html">View</a>
                     </div>
                 </div>
                 <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -142,7 +102,7 @@
                         </div>
                     <!-- end normal -->
                     <div class="quick-view">
-                        <a href="single.html">View</a>
+                        <a href="#/single.html">View</a>
                     </div>
                 </div>
                 <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -162,7 +122,7 @@
                         </div>
                     <!-- end normal -->
                     <div class="quick-view">
-                        <a href="single.html">View</a>
+                        <a href="#/single.html">View</a>
                     </div>
                 </div>
         <div class="clearfix"></div>
@@ -172,11 +132,3 @@
       </div>
 
 
-
- <div ng-view> 
-
- </div>
-
-     <!--FOOTER -->
-        <div ng-include="'footer.html'"></div>
-    <!--FINE FOOTER -->

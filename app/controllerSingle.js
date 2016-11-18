@@ -1,9 +1,7 @@
 angular.module('valveStore')
-.controller('ControllerHome',function($rootScope, $scope){
-	$rootScope.toPurchase = [];
+.controller('ControllerSingle',function($rootScope, $scope){
 
-$scope.toPurchase = [];
-
+alert('sono nel controller single');
   $scope.products = [
 	  {
 		name: 'Performance',
@@ -15,43 +13,48 @@ $scope.toPurchase = [];
 
 
 	$scope.user = [
-	{
-		productName: '',
-		name: '',
-		surname: '',
-		cardNumber: '',
-	},
+		{
+			productName: '',
+			name: '',
+			surname: '',
+			cardNumber: '',
+		},
 	];
-    $scope.confirmPurchase = function() {
-		//console.log($rootScope.toPurchase);
-	 }
 
-	 $rootScope.user = $scope.user;
 
-	$scope.buyGemAction = function(gem) {
-		alert('You can buy this gem' + " " + gem.name + " at $ " + gem.price);
+    $scope.toPurchase = [];
+    $rootScope.user = $scope.user;
+	$rootScope.products = $scope.products;
 
-		var selectedGem = gem;
+	$scope.testAction = function(ampli) {
+		alert('test');
+	};
+
+
+	$scope.buyAction = function(ampli) {
+		alert('You can buy this ampli' + " " + ampli.name + " at $ " + ampli.price);
+
+		var selectedAmpli = ampli;
 		var i=0;
 		var ins=0;
 
 		while(i<=$rootScope.toPurchase.length){
 			if($rootScope.toPurchase.length === 0){
-				$rootScope.toPurchase[i]=selectedGem;
+				$rootScope.toPurchase[i]=selectedAmpli;
 				ins=i;
 				i++;
 			}
-			 else if($rootScope.toPurchase[i] === selectedGem){
-				alert('WARNING: You have alredy purchased this gem');
+			 else if($rootScope.toPurchase[i] === selectedAmpli){
+				alert('WARNING: You have alredy purchased this ampli');
 				i++;
 				break;
 			}
 			else if(++i>$rootScope.toPurchase.length){
-				if(selectedGem === $rootScope.toPurchase[ins]){
+				if(selectedAmpli === $rootScope.toPurchase[ins]){
 					break;
 				}
 				else{
-					$rootScope.toPurchase[i-1] = selectedGem;
+					$rootScope.toPurchase[i-1] = selectedAmpli;
 					ins=$rootScope.toPurchase.length;
 					break;
 				}
