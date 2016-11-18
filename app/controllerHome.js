@@ -1,41 +1,28 @@
-angular.module('gemStore')
+angular.module('valveStore')
 .controller('ControllerHome',function($rootScope, $scope){
 	$rootScope.toPurchase = [];
 
-    $scope.products = [
-	  {
-		name: 'Dodecahedron',
-		price: 2.95,
-		description: 'Twelve sided polyhedron with all sides equidimensional and either rhombic or pentagonal. If the dodecahedron is composed of rhombs, it is known as a rhombic dodecahedron, or simply as a dodecahedron. If it is composed of pentagons, it is known as a pentagonal dodecahedron or pyritohedron. Minerals shaped as dodecahedrons belong to the isometric system.',
-		canPurcase: true,
-		soldOut: false,
-		speciication: {},
-		reviews: {},
-		img : '/img/pentagonal.jpg',
+$scope.toPurchase = [];
 
-		},
-		{
-		  name: 'Pentagonal Gem',
-		  price: 5.95,
-		  description: 'Twelve sided polyhedron with all sides equidimensional and either rhombic or pentagonal. If the dodecahedron is composed of rhombs, it is known as a rhombic dodecahedron, or simply as a dodecahedron. If it is composed of pentagons, it is known as a pentagonal dodecahedron or pyritohedron.Minerals shaped as dodecahedrons belong to the isometric system.',
-		  canPurcase: true,
-		  soldOut: false,
-		  speciication: {},
-		  reviews: {},
-		  img: '/img/do.jpg',
-		},
+  $scope.products = [
+	  {
+		name: 'Performance',
+		price: 2.95,
+		description: 'In venti anni di storia abbiamo realizzato prodotti per soddisfare le richieste dei nostri clienti in tutto il mondo. A distanza di tempo le richieste sono cambiate, e per questo abbiamo dato una nuova veste ai nostri prodotti più famosi e prestigiosi, proponendo versioni riviste e aggiornate. Il nuovo amplificatore integrato Performance aumenta la potenza, rimanendo fedele al look vincente dell’originale, considerato un’icona di rara eleganza e piacevolezza.',
+		img : '/images/grid4.jpg',
+		}
 	];
+
 
 	$scope.user = [
 	{
 		productName: '',
 		name: '',
 		surname: '',
-		iban: '',
-	}
+		cardNumber: '',
+	},
 	];
     $scope.confirmPurchase = function() {
-
 		//console.log($rootScope.toPurchase);
 	 }
 
@@ -43,7 +30,6 @@ angular.module('gemStore')
 
 	$scope.buyGemAction = function(gem) {
 		alert('You can buy this gem' + " " + gem.name + " at $ " + gem.price);
-		//console.log(gem);
 
 		var selectedGem = gem;
 		var i=0;
@@ -69,10 +55,7 @@ angular.module('gemStore')
 					ins=$rootScope.toPurchase.length;
 					break;
 				}
-
 			}
 		}
-
-		console.log("toPurchase Length: "+$rootScope.toPurchase.length);
 	 }
 });

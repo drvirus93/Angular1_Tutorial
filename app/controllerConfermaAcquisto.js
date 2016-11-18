@@ -1,4 +1,4 @@
-angular.module('gemStore')
+angular.module('valveStore')
 .controller('ControllerConfermaAcquisto',function($rootScope,$scope){
 
 

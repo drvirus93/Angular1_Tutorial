@@ -1,4 +1,4 @@
-angular.module('gemStore')
+angular.module('valveStore')
 .controller('ControllerCarrello',function($rootScope, $scope){
 	console.log("toPurchase Length: "+$rootScope.toPurchase.length);
 

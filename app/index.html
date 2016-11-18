@@ -1,34 +1,70 @@
-<html ng-app="gemStore">
-<head>
-  <meta charset="utf-8">
-  <title>Prima pagina con AngularJS</title>
-  <script src="js/angular.min.js"></script>
-  <script src="js/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="controllerHome.js"></script>
-  <script src="controllerCarrello.js"></script>
-  <script src="controllerConfermaAcquisto.js"></script>
+<html lang="en" ng-app="valveStore">
+    <head>
+    <title>ValveSTORE | web app based on AngularJS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!--AngularJs-->
+		<script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="controllerHome.js"></script>
+    <script src="controllerCarrello.js"></script>
+    <script src="controllerSingle.js"></script>
+    <script src="js/jquery-3.1.1.min.js">
+
+		<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<meta charset utf="8">
+		<!--bootstrap-->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!--coustom css-->
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <!--shop-kart-js-->
+    <script src="js/simpleCart.min.js"></script>
+		<!--default-js-->
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<!--bootstrap-js-->
+		<script src="js/bootstrap.min.js"></script>
+		
+        <!--script-->
+        <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+        
+        <!--fonts-->
+        <link href='//fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+        
+         <!-- FlexSlider -->
+            <script src="js/imagezoom.js"></script>
+              <script defer src="js/jquery.flexslider.js"></script>
+            <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+            <script>
+            // Can also be used with $(document).ready()
+            $(window).load(function() {
+              $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails"
+              });
+            });
+            </script>
+        <!-- //FlexSlider-->
 
 
-  <script src="js/jquery-3.1.1.min.js">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    </head>
+    <body>
+    
+    <!--HEADER-->
+        <div ng-include="'header.html'"></div>
+    <!--HEADER-->
+    
+<!--APP -->    
+ <div ng-view> 
 
-</head>
+ </div>
+<!--APP -->
 
-<body>
-  <h1 align="center">{{"Welcome, " + "Visitors!"}}</h1>
-<!--
-  <p>
-    La somma di 12 e 13 &egrave; uguale a {{12+13}} ?
-  </p>
-  -->
-  <h4 align="center">{{"This is our Gem Store, You can buy everything!"}}</h4>
+     <!--FOOTER -->
+        <div ng-include="'footer.html'"></div>
+    <!--FINE FOOTER -->
 
-
-  <div ng-view>
-
-  </div>
-
-</body>
+    </body>
 </html>
